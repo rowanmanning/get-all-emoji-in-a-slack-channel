@@ -36,8 +36,7 @@ module.exports = sinon.stub().resolves([
 	{
 		text: 'mock text 6 :mock_emoji_6: :mock\'emoji\'6: :mock+emoji+6:',
 		user: 'mock-user-6',
-		ts: 'mock-timestamp-6',
-		reactions: []
+		ts: 'mock-timestamp-6'
 	},
 	{
 		text: 'mock text 7',
