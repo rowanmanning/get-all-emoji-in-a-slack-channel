@@ -18,7 +18,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@rowanmanning/get-all-messages-in-a-slack-channel": "^1.0.0"
+    "@rowanmanning/get-all-messages-in-a-slack-channel": "^1.0.1"
   },
   "devDependencies": {
     "@rowanmanning/eslint-config": "^2.1.0",
