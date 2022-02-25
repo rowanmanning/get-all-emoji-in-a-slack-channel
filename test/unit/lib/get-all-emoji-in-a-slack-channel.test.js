@@ -9,7 +9,7 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 
 	beforeEach(() => {
 		const mockSlackMessages = require('../fixture/mock-slack-messages.json');
-		getAllMessagesInASlackChannel = td.replace('@rowanmanning/get-all-messages-in-a-slack-channel');
+		getAllMessagesInASlackChannel = td.replace('@rowanmanning/get-all-messages-in-a-slack-channel', td.func());
 		td.when(getAllMessagesInASlackChannel(), {ignoreExtraArgs: true}).thenResolve(mockSlackMessages);
 		getAllEmojiInASlackChannel = require('../../../lib/get-all-emoji-in-a-slack-channel');
 	});
