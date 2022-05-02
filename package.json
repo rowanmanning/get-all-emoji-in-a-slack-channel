@@ -28,7 +28,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@rowanmanning/get-all-messages-in-a-slack-channel": "^2.0.1"
+    "@rowanmanning/get-all-messages-in-a-slack-channel": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
