@@ -1,5 +1,19 @@
 # Changelog
 
+### [3.0.1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v3.0.0...v3.0.1) (2022-05-26)
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 16.2.4 to 17.0.0 ([e209601](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/e20960138d1c7f1ea69359f4347df51ba29010f6))
+* bump @commitlint/cli from 17.0.0 to 17.0.1 ([4862230](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/4862230cbb43cb5e4f34fdbe677311e5f64c49ef))
+* bump @commitlint/config-conventional from 16.2.4 to 17.0.0 ([bf3f20e](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/bf3f20ef6a68de63550c395a95be61774786a68f))
+* bump @rowanmanning/eslint-config from 3.4.0 to 3.5.0 ([bfd6c1a](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/bfd6c1add2d0c5ba4e4676f213e3e6cb0fb35c91))
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([ef51f81](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/ef51f81cad2a1405d14025322e47842a4330b0b0))
+* bump eslint from 8.14.0 to 8.15.0 ([62d0491](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/62d049134e2ca38bc82c403b7316dba064305ba4))
+* bump eslint from 8.15.0 to 8.16.0 ([3bef13a](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/3bef13a4444c04242f4b5c9d7b46d1a88fde01f8))
+* bump husky from 7.0.4 to 8.0.1 ([cb9222b](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/cb9222bb94d5429cf506161f4c35d6e905352355))
+
 ## [3.0.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v2.1.0...v3.0.0) (2022-05-02)
 
 

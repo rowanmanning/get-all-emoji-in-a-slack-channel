@@ -1,6 +1,6 @@
 {
   "name": "@rowanmanning/get-all-emoji-in-a-slack-channel",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Get all emoji in a public Slack channel",
   "keywords": [
     "emoji",
