@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v3.1.0...v3.1.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* hide the misc changelog section ([100e7ef](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/100e7efeebd71536467a72368158a73f903427ac))
+
 ## [3.1.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v3.0.1...v3.1.0) (2022-06-11)
 
 
