@@ -216,4 +216,10 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 
 	});
 
+	describe('.default', () => {
+		it('aliases the module exports', () => {
+			assert.strictEqual(getAllEmojiInASlackChannel, getAllEmojiInASlackChannel.default);
+		});
+	});
+
 });
