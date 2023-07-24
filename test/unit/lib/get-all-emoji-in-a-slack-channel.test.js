@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 const td = require('testdouble');
 
 describe('lib/get-all-emoji-in-a-slack-channel', () => {
@@ -15,7 +15,7 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 	});
 
 	it('exports a function', () => {
-		assert.isFunction(getAllEmojiInASlackChannel);
+		assert.strictEqual(typeof getAllEmojiInASlackChannel, 'function');
 	});
 
 	describe('getAllEmojiInASlackChannel(slackWebApiClient, slackChannelId)', () => {
@@ -34,9 +34,9 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 		});
 
 		it('resolves with an array of emoji found in the Slack messages', () => {
-			assert.isArray(resolvedValue);
-			assert.lengthOf(resolvedValue, 22);
-			assert.deepEqual(resolvedValue, [
+			assert.ok(Array.isArray(resolvedValue));
+			assert.strictEqual(resolvedValue.length, 22);
+			assert.deepStrictEqual(resolvedValue, [
 				{
 					emoji: 'mock-emoji-1',
 					modifierEmoji: null,
