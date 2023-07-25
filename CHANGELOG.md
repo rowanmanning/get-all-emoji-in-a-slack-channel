@@ -3,48 +3,9 @@
 ## 4.0.2 (2023-07-25)
 
 
-### ⚠ BREAKING CHANGES
-
-* drop official support for npm v7
-* drop support for Node.js 14
-* get-all-messages-in-a-slack-channel no longer supports Node.js v12
-* drop support for Node.js versions below 14
-* mocha no longer supports Node.js v12
-
-### Features
-
-* ensure typescript types are always valid ([69ac587](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/69ac587fe52b088e79fd0f6e986049f60b8282dc))
-
-
 ### Bug Fixes
 
-* add support for Node.js 20 ([e11f942](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/e11f942b76b25dd78d5555735adc98dc04b37dad))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([92a1590](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/92a1590a90d538b0145a494c7ac51b17b93cc628))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([a59b0e8](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/a59b0e83e113861a83efeea8cd11b9430a5d1c63))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([b9bef42](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/b9bef42564e0202b713b4232590929a20f38f993))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([b0aaf52](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/b0aaf527a1eeea0ef0859fc17d2b29b9a99dc11e))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([ba46d05](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/ba46d0597f3f0c16f8270be6e4de3fe845c2ddc2))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([30cecd1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/30cecd1d603a790f2b6eacb2dc2c99cc58182d08))
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([a8eb5dc](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/a8eb5dc08e98a0e70528fa94bff48633d7bd2992))
-* bump json5 from 2.2.1 to 2.2.3 ([1e12445](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/1e12445633ed05d2856f47031a59cb45e0f71c70))
-* hide the misc changelog section ([100e7ef](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/100e7efeebd71536467a72368158a73f903427ac))
-* improve TypeScript compatibility ([64452dd](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/64452ddccb7b09fbd4dd57e46336af3d1ef910bd))
-* sort out broken releases ([d51b5d7](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/d51b5d748e3c8e7fb4acfe58bcfc1bc95c118a05))
-* support npm v9 ([f718ae0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/f718ae0e34388d3587a45a4b35eb106e1354649a))
-
-
-### Documentation Changes
-
-* manually define changelog sections ([9bb1ee9](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/9bb1ee9075236d9c3a7cb6fe654cdbb1c4ad65c4))
-
-
-### Miscellaneous
-
-* bump @rowanmanning/get-all-messages-in-a-slack-channel ([5d452f4](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/5d452f4e812bc64920962dcfa7e93fd653beefa3))
-* bump mocha from 9.2.2 to 10.0.0 ([245d4f7](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/245d4f76d727d2d326a9f74d031177c874724d88))
-* drop official support for npm v7 ([2da88c7](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/2da88c75f4e0a7c0ef4ea994ecb08227d1cc65c2))
-* drop support for Node.js 14 ([70fd193](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/70fd193f7068ea1d61dae9e536cf1b66f548a0b9))
-* drop support for Node.js versions below 14 ([448ee3f](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/448ee3ff0c80d9b1f62d43cd11330bddb27d2302))
+* sort out broken releases
 
 ## [4.0.1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v4.0.0...v4.0.1) (2023-04-18)
 
