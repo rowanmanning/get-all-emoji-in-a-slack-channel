@@ -32,7 +32,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@rowanmanning/get-all-messages-in-a-slack-channel": "^4.0.0"
+    "@rowanmanning/get-all-messages-in-a-slack-channel": "^5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
