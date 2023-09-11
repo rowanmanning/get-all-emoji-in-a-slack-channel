@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v4.0.3...v5.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+
+### Miscellaneous
+
+* drop support for Node.js 16 ([fb6f7ee](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/fb6f7ee30880dc9f9a04a81e32d0d25958803b93))
+
 ## [4.0.3](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v4.0.2...v4.0.3) (2023-09-11)
 
 
