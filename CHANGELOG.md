@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.0.2](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.0.1...v5.0.2) (2024-01-14)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([790990f](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/790990f1ac565569172326564a92a9750f3c0fb2))
+* bump follow-redirects from 1.14.9 to 1.15.4 ([1940985](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/1940985a804f2e33ec7a16f3b09005a5c1b18bc9))
+* bump the npm_and_yarn group group with 1 update ([fcec63f](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/fcec63fc0454d579ed60f8bfd37ce0fbcbbb77d6))
+
 ## [5.0.1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.0.0...v5.0.1) (2023-11-22)
 
 
