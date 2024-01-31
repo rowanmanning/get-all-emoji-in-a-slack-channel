@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.0.2...v5.1.0) (2024-01-31)
+
+
+### Features
+
+* add official support for npm 10 ([023883e](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/023883e4591f386a8cec29b3daf0cb052ec426e9))
+
+
+### Bug Fixes
+
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([559ce47](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/559ce47608922ec41322e1184b46ffc4a7ef832c))
+
 ## [5.0.2](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.0.1...v5.0.2) (2024-01-14)
 
 
