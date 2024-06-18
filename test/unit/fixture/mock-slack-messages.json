@@ -41,11 +41,7 @@
 		"reactions": [
 			{
 				"name": "mock-emoji-7",
-				"users": [
-					"mock-user-1",
-					"mock-user-2",
-					"mock-user-3"
-				]
+				"users": ["mock-user-1", "mock-user-2", "mock-user-3"]
 			}
 		]
 	},
@@ -56,15 +52,11 @@
 		"reactions": [
 			{
 				"name": "mock-emoji-8",
-				"users": [
-					"mock-user-1"
-				]
+				"users": ["mock-user-1"]
 			},
 			{
 				"name": "mock-emoji-9",
-				"users": [
-					"mock-user-1"
-				]
+				"users": ["mock-user-1"]
 			}
 		]
 	},
@@ -75,9 +67,7 @@
 		"reactions": [
 			{
 				"name": "mock-emoji-9::skin-tone-4",
-				"users": [
-					"mock-user-1"
-				]
+				"users": ["mock-user-1"]
 			}
 		]
 	}
