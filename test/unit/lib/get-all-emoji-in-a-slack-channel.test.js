@@ -9,8 +9,13 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 
 	beforeEach(() => {
 		const mockSlackMessages = require('../fixture/mock-slack-messages.json');
-		getAllMessagesInASlackChannel = td.replace('@rowanmanning/get-all-messages-in-a-slack-channel', td.func());
-		td.when(getAllMessagesInASlackChannel(), {ignoreExtraArgs: true}).thenResolve(mockSlackMessages);
+		getAllMessagesInASlackChannel = td.replace(
+			'@rowanmanning/get-all-messages-in-a-slack-channel',
+			td.func()
+		);
+		td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenResolve(
+			mockSlackMessages
+		);
 		getAllEmojiInASlackChannel = require('../../../lib/get-all-emoji-in-a-slack-channel');
 	});
 
@@ -30,7 +35,9 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 		});
 
 		it('fetches all messages for the Slack channel', () => {
-			td.verify(getAllMessagesInASlackChannel(slackWebApiClient, 'mock-channel-id'), {times: 1});
+			td.verify(getAllMessagesInASlackChannel(slackWebApiClient, 'mock-channel-id'), {
+				times: 1
+			});
 		});
 
 		it('resolves with an array of emoji found in the Slack messages', () => {
@@ -136,7 +143,7 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 					isReaction: false
 				},
 				{
-					emoji: 'mock\'emoji\'6',
+					emoji: "mock'emoji'6",
 					modifierEmoji: null,
 					user: 'mock-user-6',
 					ts: 'mock-timestamp-6',
@@ -201,7 +208,9 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 			beforeEach(async () => {
 				try {
 					getAllMessagesError = new Error('mock get all messages error');
-					td.when(getAllMessagesInASlackChannel(), {ignoreExtraArgs: true}).thenReject(getAllMessagesError);
+					td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenReject(
+						getAllMessagesError
+					);
 					await getAllEmojiInASlackChannel(slackWebApiClient, 'mock-channel-id');
 				} catch (error) {
 					rejectedError = error;
@@ -211,9 +220,7 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 			it('rejects with the error', () => {
 				assert.strictEqual(rejectedError, getAllMessagesError);
 			});
-
 		});
-
 	});
 
 	describe('.default', () => {
@@ -221,5 +228,4 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 			assert.strictEqual(getAllEmojiInASlackChannel, getAllEmojiInASlackChannel.default);
 		});
 	});
-
 });
