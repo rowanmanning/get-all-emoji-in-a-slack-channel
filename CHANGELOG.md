@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.1.0...v5.2.0) (2024-06-23)
+
+
+### Features
+
+* add Node.js 22 support ([27120b1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/27120b161d9f1e69ac46fb753158064c680ef7c3))
+
 ## [5.1.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.0.2...v5.1.0) (2024-01-31)
 
 
