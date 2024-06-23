@@ -1,7 +1,10 @@
 'use strict';
 
+const { afterEach, beforeEach, describe, it } = require('node:test');
 const assert = require('node:assert');
 const td = require('testdouble');
+
+td.config({ ignoreWarnings: true });
 
 describe('lib/get-all-emoji-in-a-slack-channel', () => {
 	let getAllEmojiInASlackChannel;
@@ -18,6 +21,8 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 		);
 		getAllEmojiInASlackChannel = require('../../../lib/get-all-emoji-in-a-slack-channel');
 	});
+
+	afterEach(() => td.reset());
 
 	it('exports a function', () => {
 		assert.strictEqual(typeof getAllEmojiInASlackChannel, 'function');
