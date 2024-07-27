@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.2.2](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.1...v5.2.2) (2024-07-27)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([ca480d4](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/ca480d4ea5b319022ef1490e070ea5584ae6dd6b))
+* prevent husky from failing ([c634132](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/c6341329d5e141b8e0cce038fa7b25fb44914030))
+
 ## [5.2.1](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.0...v5.2.1) (2024-07-03)
 
 
