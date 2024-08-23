@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.2.3](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.2...v5.2.3) (2024-08-23)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([b16e556](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/b16e5566e6e2651888d71a27b99006d980291258))
+* bump axios from 1.6.5 to 1.7.4 ([02f630f](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/02f630fef6bc8c4cbbbb1716d2212b75f5863694))
+
 ## [5.2.2](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.1...v5.2.2) (2024-07-27)
 
 
