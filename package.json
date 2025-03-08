@@ -29,7 +29,7 @@
     "prepare": "husky || true"
   },
   "dependencies": {
-    "@rowanmanning/get-all-messages-in-a-slack-channel": "^5.0.0"
+    "@rowanmanning/get-all-messages-in-a-slack-channel": "^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
