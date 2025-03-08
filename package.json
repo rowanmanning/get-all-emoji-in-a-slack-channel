@@ -20,8 +20,6 @@
   "scripts": {
     "verify": "npm run verify:biome && npm run verify:types",
     "verify:biome": "biome check",
-    "build": "npm run build:types",
-    "build:types": "tsc --noEmit false --emitDeclarationOnly --project ./jsconfig.json",
     "verify:types": "tsc --noEmit --project ./jsconfig.json",
     "test": "npm run test:coverage",
     "test:unit": "cd test/unit && node --test",
@@ -30,6 +28,9 @@
   },
   "dependencies": {
     "@rowanmanning/get-all-messages-in-a-slack-channel": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@slack/web-api": "^6.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -41,6 +42,7 @@
     "typescript": "^5.5.2"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "nyc": {
     "eager": true,
     "reporter": [
