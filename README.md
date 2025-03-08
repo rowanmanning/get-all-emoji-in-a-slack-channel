@@ -3,13 +3,11 @@
 
 Get all emoji in a public Slack channel.
 
-
-## Table of Contents
-
-  * [Requirements](#requirements)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [License](#license)
+* [Requirements](#requirements)
+* [Usage](#usage)
+* [Migration](#migration)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Requirements
@@ -52,6 +50,11 @@ const emojiOccurrences = await getAllEmojiInASlackChannel(slackWebClient, 'YOUR-
     isReaction: Boolean    // Whether the emoji was a reaction rather than part of the message
 }
 ```
+
+
+## Migration
+
+A new major version of this project is released if breaking changes are introduced. We maintain a [migration guide](docs/migration.md) to help users migrate between these versions.
 
 
 ## Contributing
