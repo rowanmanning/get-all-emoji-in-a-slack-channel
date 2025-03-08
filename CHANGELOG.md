@@ -1,5 +1,28 @@
 # Changelog
 
+## [6.0.0](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.3...v6.0.0) (2025-03-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* move to named exports
+* drop Node.js 18
+
+### Bug Fixes
+
+* bump @rowanmanning/get-all-messages-in-a-slack-channel ([844d530](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/844d5308ecfb12ee15621a0869a9635a8fa2a75d))
+* bump axios from 1.7.4 to 1.8.2 ([76de999](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/76de99975abdb95004bb2c2d1686424a7134e92a))
+
+
+### Miscellaneous Chores
+
+* drop Node.js 18 ([cde706b](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/cde706bdd41af5e4dfb851a1e59f35f683887dcf))
+
+
+### Code Refactoring
+
+* move to named exports ([045c704](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/commit/045c704272031c7d42e81db719f2afbab5643655))
+
 ## [5.2.3](https://github.com/rowanmanning/get-all-emoji-in-a-slack-channel/compare/v5.2.2...v5.2.3) (2024-08-23)
 
 
