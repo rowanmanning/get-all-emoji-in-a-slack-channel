@@ -5,6 +5,10 @@ const {
 } = require('@rowanmanning/get-all-messages-in-a-slack-channel');
 
 /**
+ * @import { WebClient } from '@slack/web-api'
+ */
+
+/**
  * A reguler expression used to find emoji in a string.
  *
  * @private
@@ -16,7 +20,7 @@ const emojiRegExp = /:(([a-z0-9'+_-]+)(::(skin-tone-\d))?):/g;
  * Get all of the emoji occurrences in a Slack channel.
  *
  * @public
- * @param {object} slackWebApiClient
+ * @param {WebClient} slackWebApiClient
  *     A pre-authenticated Slack Web API client {@see https://www.npmjs.com/package/@slack/web-api}.
  * @param {string} slackChannelId
  *     The ID of the Slack channel to get all emoji for.
@@ -118,5 +122,6 @@ function extractEmojiOccurrencesFromMessageReactions(slackMessage) {
  *     Whether the emoji occurrence is a reaction on a message or not.
  */
 
+/** @type {getAllEmojiInASlackChannel} */
 module.exports = getAllEmojiInASlackChannel;
 module.exports.default = module.exports;
