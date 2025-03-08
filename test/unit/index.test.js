@@ -6,12 +6,12 @@ const td = require('testdouble');
 
 td.config({ ignoreWarnings: true });
 
-describe('lib/get-all-emoji-in-a-slack-channel', () => {
+describe('get-all-emoji-in-a-slack-channel', () => {
 	let getAllEmojiInASlackChannel;
 	let getAllMessagesInASlackChannel;
 
 	beforeEach(() => {
-		const mockSlackMessages = require('../fixture/mock-slack-messages.json');
+		const mockSlackMessages = require('./fixture/mock-slack-messages.json');
 		getAllMessagesInASlackChannel = td.replace(
 			'@rowanmanning/get-all-messages-in-a-slack-channel',
 			{ getAllMessagesInASlackChannel: td.func() }
@@ -19,7 +19,7 @@ describe('lib/get-all-emoji-in-a-slack-channel', () => {
 		td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenResolve(
 			mockSlackMessages
 		);
-		getAllEmojiInASlackChannel = require('../../../lib/get-all-emoji-in-a-slack-channel');
+		getAllEmojiInASlackChannel = require('../..');
 	});
 
 	afterEach(() => td.reset());

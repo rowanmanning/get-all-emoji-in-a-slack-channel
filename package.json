@@ -40,7 +40,7 @@
     "testdouble": "^3.16.4",
     "typescript": "^5.5.2"
   },
-  "main": "lib/get-all-emoji-in-a-slack-channel.js",
+  "main": "index.js",
   "nyc": {
     "eager": true,
     "reporter": [
