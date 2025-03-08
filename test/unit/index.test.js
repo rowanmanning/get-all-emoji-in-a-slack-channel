@@ -19,7 +19,7 @@ describe('get-all-emoji-in-a-slack-channel', () => {
 		td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenResolve(
 			mockSlackMessages
 		);
-		getAllEmojiInASlackChannel = require('../..');
+		getAllEmojiInASlackChannel = require('../..').getAllEmojiInASlackChannel;
 	});
 
 	afterEach(() => td.reset());
@@ -225,12 +225,6 @@ describe('get-all-emoji-in-a-slack-channel', () => {
 			it('rejects with the error', () => {
 				assert.strictEqual(rejectedError, getAllMessagesError);
 			});
-		});
-	});
-
-	describe('.default', () => {
-		it('aliases the module exports', () => {
-			assert.strictEqual(getAllEmojiInASlackChannel, getAllEmojiInASlackChannel.default);
 		});
 	});
 });

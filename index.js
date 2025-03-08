@@ -31,7 +31,10 @@ const emojiRegExp = /:(([a-z0-9'+_-]+)(::(skin-tone-\d))?):/g;
  * @throws {Error}
  *     Throws if the Slack API errors.
  */
-async function getAllEmojiInASlackChannel(slackWebApiClient, slackChannelId) {
+exports.getAllEmojiInASlackChannel = async function getAllEmojiInASlackChannel(
+	slackWebApiClient,
+	slackChannelId
+) {
 	const messages = (await getAllMessagesInASlackChannel(slackWebApiClient, slackChannelId)) || [];
 	const emojiOccurrences = [];
 	for (const message of messages) {
@@ -39,7 +42,7 @@ async function getAllEmojiInASlackChannel(slackWebApiClient, slackChannelId) {
 		emojiOccurrences.push(...extractEmojiOccurrencesFromMessageReactions(message));
 	}
 	return emojiOccurrences;
-}
+};
 
 /**
  * Extract emoji occurrences from a Slack message's text.
@@ -121,7 +124,3 @@ function extractEmojiOccurrencesFromMessageReactions(slackMessage) {
  * @property {boolean} isReaction
  *     Whether the emoji occurrence is a reaction on a message or not.
  */
-
-/** @type {getAllEmojiInASlackChannel} */
-module.exports = getAllEmojiInASlackChannel;
-module.exports.default = module.exports;

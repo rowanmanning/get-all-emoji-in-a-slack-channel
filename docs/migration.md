@@ -20,6 +20,22 @@ This document outlines how to migrate to new major breaking versions of this lib
 
 The library now only supports Node.js v20 and above.
 
+### Switch to named exports
+
+We've moved away from using a default export for the `getAllEmojiInASlackChannel` function. It's now a named export. You'll need to update your imports:
+
+```diff
+- const getAllEmojiInASlackChannel = require('@rowanmanning/get-all-emoji-in-a-slack-channel');
++ const { getAllEmojiInASlackChannel } = require('@rowanmanning/get-all-emoji-in-a-slack-channel');
+```
+
+or
+
+```diff
+- import getAllEmojiInASlackChannel from '@rowanmanning/get-all-emoji-in-a-slack-channel';
++ import { getAllEmojiInASlackChannel } from '@rowanmanning/get-all-emoji-in-a-slack-channel';
+```
+
 ## Migrating from v4 to v5
 
 ### Dropped Node.js v16 support

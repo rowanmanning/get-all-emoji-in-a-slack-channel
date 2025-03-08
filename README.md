@@ -28,8 +28,8 @@ npm install @slack/web-api @rowanmanning/get-all-emoji-in-a-slack-channel
 Load the library into your code with a `require` call (you'll also need the Slack `WebClient` class):
 
 ```js
-const {WebClient} = require('@slack/web-api');
-const getAllEmojiInASlackChannel = require('@rowanmanning/get-all-emoji-in-a-slack-channel');
+const { WebClient } = require('@slack/web-api');
+const { getAllEmojiInASlackChannel } = require('@rowanmanning/get-all-emoji-in-a-slack-channel');
 ```
 
 Get all occurrences of an emoji in a Slack channel:
