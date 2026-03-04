@@ -1,29 +1,25 @@
 'use strict';
 
-const { afterEach, beforeEach, describe, it } = require('node:test');
+const { beforeEach, describe, it, mock } = require('node:test');
 const assert = require('node:assert');
-const td = require('testdouble');
 
-td.config({ ignoreWarnings: true });
+const conversations = { history: mock.fn() };
+const WebClient = mock.fn(
+	class WebClient {
+		conversations = conversations;
+	}
+);
+mock.module('@slack/web-api', { namedExports: { WebClient } });
+
+const mockSlackMessages = require('./fixture/mock-slack-messages.json');
+const getAllMessagesInASlackChannel = mock.fn(async () => mockSlackMessages);
+mock.module('@rowanmanning/get-all-messages-in-a-slack-channel', {
+	namedExports: { getAllMessagesInASlackChannel }
+});
+
+const { getAllEmojiInASlackChannel } = require('../..');
 
 describe('get-all-emoji-in-a-slack-channel', () => {
-	let getAllEmojiInASlackChannel;
-	let getAllMessagesInASlackChannel;
-
-	beforeEach(() => {
-		const mockSlackMessages = require('./fixture/mock-slack-messages.json');
-		getAllMessagesInASlackChannel = td.replace(
-			'@rowanmanning/get-all-messages-in-a-slack-channel',
-			{ getAllMessagesInASlackChannel: td.func() }
-		).getAllMessagesInASlackChannel;
-		td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenResolve(
-			mockSlackMessages
-		);
-		getAllEmojiInASlackChannel = require('../..').getAllEmojiInASlackChannel;
-	});
-
-	afterEach(() => td.reset());
-
 	it('exports a function', () => {
 		assert.strictEqual(typeof getAllEmojiInASlackChannel, 'function');
 	});
@@ -40,14 +36,16 @@ describe('get-all-emoji-in-a-slack-channel', () => {
 		});
 
 		it('fetches all messages for the Slack channel', () => {
-			td.verify(getAllMessagesInASlackChannel(slackWebApiClient, 'mock-channel-id'), {
-				times: 1
-			});
+			assert.strictEqual(getAllMessagesInASlackChannel.mock.callCount(), 1);
+			assert.deepStrictEqual(getAllMessagesInASlackChannel.mock.calls[0].arguments, [
+				slackWebApiClient,
+				'mock-channel-id'
+			]);
 		});
 
 		it('resolves with an array of emoji found in the Slack messages', () => {
 			assert.ok(Array.isArray(resolvedValue));
-			assert.strictEqual(resolvedValue.length, 22);
+			assert.strictEqual(resolvedValue.length, 24);
 			assert.deepStrictEqual(resolvedValue, [
 				{
 					emoji: 'mock-emoji-1',
@@ -202,8 +200,36 @@ describe('get-all-emoji-in-a-slack-channel', () => {
 					user: 'mock-user-1',
 					ts: 'mock-timestamp-9',
 					isReaction: true
+				},
+				{
+					emoji: 'mock-emoji-10',
+					modifierEmoji: null,
+					user: 'mock-user-1',
+					ts: null,
+					isReaction: true
+				},
+				{
+					emoji: 'mock-emoji-11',
+					modifierEmoji: null,
+					user: null,
+					ts: null,
+					isReaction: false
 				}
 			]);
+		});
+
+		describe('when `getAllMessagesInASlackChannel` returns nothing', () => {
+			beforeEach(async () => {
+				getAllMessagesInASlackChannel.mock.mockImplementation(async () => {});
+				resolvedValue = await getAllEmojiInASlackChannel(
+					slackWebApiClient,
+					'mock-channel-id'
+				);
+			});
+
+			it('resolves with an empty array', () => {
+				assert.deepStrictEqual(resolvedValue, []);
+			});
 		});
 
 		describe('when `getAllMessagesInASlackChannel` errors', () => {
@@ -213,9 +239,9 @@ describe('get-all-emoji-in-a-slack-channel', () => {
 			beforeEach(async () => {
 				try {
 					getAllMessagesError = new Error('mock get all messages error');
-					td.when(getAllMessagesInASlackChannel(), { ignoreExtraArgs: true }).thenReject(
-						getAllMessagesError
-					);
+					getAllMessagesInASlackChannel.mock.mockImplementation(async () => {
+						throw getAllMessagesError;
+					});
 					await getAllEmojiInASlackChannel(slackWebApiClient, 'mock-channel-id');
 				} catch (error) {
 					rejectedError = error;
