@@ -70,5 +70,23 @@
 				"users": ["mock-user-1"]
 			}
 		]
+	},
+	{
+		"text": "mock text 10",
+		"reactions": [
+			{
+				"name": "mock-emoji-10",
+				"users": ["mock-user-1"]
+			}
+		]
+	},
+	{
+		"text": "mock text 11 :mock-emoji-11:"
+	},
+	{
+		"reactions": [{}]
+	},
+	{
+		"reactions": []
 	}
 ]
